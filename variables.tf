@@ -22,13 +22,13 @@ variable "resource_group_name" {
 variable "sku" {
   type        = string
   description = <<DESCRIPTION
-  The 'sku' value must be one of 'standard', 'premium', or 'trial'.
-  NOTE: Downgrading to a trial sku from a standard or premium sku will force a new resource to be created.
+  The 'sku' value must be one of 'premium', or 'trial'.
+  NOTE: Changing the sku from 'premium' to 'trial' will force a new resource to be created.
   DESCRIPTION
 
   validation {
-    condition     = can(regex("^(standard|premium|trial)$", lower(var.sku)))
-    error_message = "The 'sku' value must be one of 'standard', 'premium', or 'trial'."
+    condition     = can(regex("^(premium|trial)$", lower(var.sku)))
+    error_message = "The 'sku' value must be one of 'premium', or 'trial'."
   }
 }
 
