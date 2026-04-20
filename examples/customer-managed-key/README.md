@@ -69,7 +69,7 @@ resource "azurerm_key_vault" "this" {
   # checkov:skip=CKV_AZURE_189: This is a test resource
   name                       = module.naming.key_vault.name_unique
   resource_group_name        = azurerm_resource_group.this.name
-  sku_name                   = "standard"
+  sku_name                   = "premium"
   tenant_id                  = data.azurerm_client_config.this.tenant_id
   enable_rbac_authorization  = true
   purge_protection_enabled   = true
