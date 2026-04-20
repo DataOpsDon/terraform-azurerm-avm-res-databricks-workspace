@@ -64,8 +64,8 @@ Type: `string`
 
 ### <a name="input_sku"></a> [sku](#input\_sku)
 
-Description:   The 'sku' value must be one of 'standard', 'premium', or 'trial'.  
-  NOTE: Downgrading to a trial sku from a standard or premium sku will force a new resource to be created.
+Description:   The 'sku' value must be one of 'premium', or 'trial'.  
+  NOTE: Changing the sku from 'premium' to 'trial' will force a new resource to be created.
 
 Type: `string`
 
